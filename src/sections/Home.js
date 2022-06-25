@@ -1,9 +1,8 @@
 import * as React from 'react';
-import {Grid, Typography, Stack, IconButton, Box} from "@mui/material";
+import {Grid, Typography, IconButton} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import ArrowDownwardSharpIcon from '@mui/icons-material/ArrowDownwardSharp';
 import AppDrawer from "../components/AppDrawer";
 
 
