@@ -3,10 +3,9 @@ import {Link, Typography} from "@mui/material";
 
 
 function MenuLink(props) {
-    const {to, text, handler} = props;
+    const {text, handler} = props;
     return (
-        <Link href={to}
-              color={"#22577a"}
+        <Link color={"#22577a"}
               sx={{
                   textDecoration: 'none',
                   zIndex: '1',

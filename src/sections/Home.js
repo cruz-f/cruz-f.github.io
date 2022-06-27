@@ -4,9 +4,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import AppDrawer from "../components/AppDrawer";
+import DownButton from "../components/DownButton";
 
 
-function Home() {
+function Home(props) {
+    const {aboutRef} = props;
+    const ScrollToRef = () => window.scrollTo(0, aboutRef.current.offsetTop-65)
     return (
         <Grid container
               direction="row"
@@ -31,7 +34,7 @@ function Home() {
                 </Typography>
             </Grid>
             <Grid item mt={5} xs={"auto"} alignSelf={'flex-start'}>
-                <AppDrawer/>
+                <AppDrawer aboutScrollHandler={() => ScrollToRef()}/>
             </Grid>
             <Grid item xs={6}>
             </Grid>
@@ -85,9 +88,7 @@ function Home() {
                 </IconButton>
             </Grid>
             <Grid item xs={'auto'} mb={3} alignSelf={'flex-end'}>
-                {/*<IconButton href={"/"}>
-                    <ArrowDownwardSharpIcon sx={{ color: "#FFF" }} fontSize="large"/>
-                </IconButton>*/}
+                <DownButton scrollHandler={() => ScrollToRef()} text={'about'}/>
             </Grid>
         </Grid>
     );

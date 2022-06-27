@@ -5,9 +5,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuLink from "./MenuLink";
 
 
-function AppDrawer() {
-
+function AppDrawer(props) {
+    const {aboutScrollHandler} = props;
     const [state, setState] = React.useState(false);
+
+    const aboutHandler = () => {
+        console.log("About");
+        setState(false);
+        aboutScrollHandler();
+    }
 
     return (
         <>
@@ -30,19 +36,21 @@ function AppDrawer() {
                     <Grid item mt={5} xs={10}>
                         <List>
                             <ListItem>
-                                <MenuLink to={"/"} text={'HOME'} handler={() => setState(false)} />
+                                <MenuLink text={'HOME'}
+                                          handler={() => setState(false)}/>
                             </ListItem>
                             <ListItem>
-                                <MenuLink to={"/"} text={'ABOUT'} handler={() => setState(false)} />
+                                <MenuLink text={'ABOUT'}
+                                          handler={() => aboutHandler()} />
                             </ListItem>
                             <ListItem>
-                                <MenuLink to={"/"} text={'TOOLS'} handler={() => setState(false)} />
+                                <MenuLink text={'TOOLS'} handler={() => setState(false)} />
                             </ListItem>
                             <ListItem>
-                                <MenuLink to={"/"} text={'PUBLICATIONS'} handler={() => setState(false)} />
+                                <MenuLink text={'PUBLICATIONS'} handler={() => setState(false)} />
                             </ListItem>
                             <ListItem>
-                                <MenuLink to={"/"} text={'CONTACT'} handler={() => setState(false)} />
+                                <MenuLink text={'CONTACT'} handler={() => setState(false)} />
                             </ListItem>
                         </List>
                     </Grid>
