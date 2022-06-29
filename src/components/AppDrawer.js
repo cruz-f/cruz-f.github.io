@@ -6,14 +6,10 @@ import MenuLink from "./MenuLink";
 
 
 function AppDrawer(props) {
-    const {aboutScrollHandler} = props;
-    const [state, setState] = React.useState(false);
+    const {aboutRef} = props;
+    const ScrollToRef = () => aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' })
 
-    const aboutHandler = () => {
-        console.log("About");
-        setState(false);
-        aboutScrollHandler();
-    }
+    const [state, setState] = React.useState(false);
 
     return (
         <>
@@ -25,8 +21,9 @@ function AppDrawer(props) {
                 anchor={'right'}
                 open={state}
                 sx = {{
-                    '& .MuiDrawer-paper': { minWidth: '100vw', minHeight: '100vh', backgroundColor: '#80ed99'}
+                    '& .MuiDrawer-paper': { minWidth: '100vw', backgroundColor: '#80ed99'}
                 }}
+                onClose={() => ScrollToRef()}>
             >
                 <Grid container
                       direction="row"
@@ -41,7 +38,7 @@ function AppDrawer(props) {
                             </ListItem>
                             <ListItem>
                                 <MenuLink text={'ABOUT'}
-                                          handler={() => aboutHandler()} />
+                                          handler={() => {setState(false); ScrollToRef()}} />
                             </ListItem>
                             <ListItem>
                                 <MenuLink text={'TOOLS'} handler={() => setState(false)} />

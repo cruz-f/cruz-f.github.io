@@ -9,7 +9,7 @@ import DownButton from "../components/DownButton";
 
 function Home(props) {
     const {aboutRef} = props;
-    const ScrollToRef = () => window.scrollTo(0, aboutRef.current.offsetTop-65)
+    const ScrollToRef = () => aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' })
     return (
         <Grid container
               direction="row"
@@ -34,7 +34,7 @@ function Home(props) {
                 </Typography>
             </Grid>
             <Grid item mt={5} xs={"auto"} alignSelf={'flex-start'}>
-                <AppDrawer aboutScrollHandler={() => ScrollToRef()}/>
+                <AppDrawer aboutRef={aboutRef}/>
             </Grid>
             <Grid item xs={6}>
             </Grid>

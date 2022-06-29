@@ -8,6 +8,7 @@ function About(props) {
 
     return (
         <Grid container
+              ref={aboutRef}
               direction="row"
               sx={{
                   backgroundColor: '#fff',
@@ -17,8 +18,7 @@ function About(props) {
               justifyContent="space-between"
               alignItems="center">
             <Grid item mt={5} xs={4} alignSelf={'center'}>
-                <Typography ref={aboutRef}
-                            color={'#212529'}
+                <Typography color={'#212529'}
                             sx={{
                                 fontWeight: 'lighter',
                                 textTransform: "uppercase",
