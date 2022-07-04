@@ -5,9 +5,16 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuLink from "./MenuLink";
 
 
-function AppDrawer(props) {
-    const {aboutRef} = props;
-    const ScrollToRef = () => aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' })
+function AppDrawer() {
+
+    const scrollToHome = () => {
+        const homeSection = document.querySelector( '#home' );
+        homeSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
+    }
+    const scrollToAbout = () => {
+        const aboutSection = document.querySelector( '#about' );
+        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
+    };
 
     const [state, setState] = React.useState(false);
 
@@ -15,16 +22,19 @@ function AppDrawer(props) {
         <>
             <IconButton
                 onClick={() => setState(true)}>
-                <MenuIcon sx={{ color: "#FFF" }} fontSize="large"/>
+                <MenuIcon sx={{ color: '#FFF' }} fontSize="large"/>
             </IconButton>
             <Drawer
+                position={"fixed"}
+                type={'temporary'}
                 anchor={'right'}
                 open={state}
+                disableRestoreFocus={true}
+                onClose={() => setState(false)}
                 sx = {{
-                    '& .MuiDrawer-paper': { minWidth: '100vw', backgroundColor: '#80ed99'}
-                }}
-                onClose={() => ScrollToRef()}>
-            >
+                    '& .MuiDrawer-paper': { minWidth: '60vw', maxWidth: '60vw', maxHeight: '100vh',
+                        backgroundColor: '#80ed99'}
+                }}>
                 <Grid container
                       direction="row"
                       rowSpacing={4}
@@ -34,11 +44,11 @@ function AppDrawer(props) {
                         <List>
                             <ListItem>
                                 <MenuLink text={'HOME'}
-                                          handler={() => setState(false)}/>
+                                          handler={() => {setState(false); scrollToHome()}}/>
                             </ListItem>
                             <ListItem>
                                 <MenuLink text={'ABOUT'}
-                                          handler={() => {setState(false); ScrollToRef()}} />
+                                          handler={() => {setState(false); scrollToAbout()}} />
                             </ListItem>
                             <ListItem>
                                 <MenuLink text={'TOOLS'} handler={() => setState(false)} />

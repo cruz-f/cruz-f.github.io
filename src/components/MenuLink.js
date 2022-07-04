@@ -13,6 +13,7 @@ function MenuLink(props) {
                   position: 'relative',
                   paddingTop: '1rem',
                   paddingBottom: '.5rem',
+                  cursor: 'pointer',
                   '&:before': {
                       content: '""',
                       position: 'absolute',

@@ -4,11 +4,10 @@ import About from "./sections/About";
 
 
 function App() {
-    const aboutRef = React.createRef();
     return (
         <>
-            <Home aboutRef={aboutRef}/>
-            <About aboutRef={aboutRef}/>
+            <Home />
+            <About />
         </>
     );
 }

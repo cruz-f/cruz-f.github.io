@@ -7,11 +7,14 @@ import AppDrawer from "../components/AppDrawer";
 import DownButton from "../components/DownButton";
 
 
-function Home(props) {
-    const {aboutRef} = props;
-    const ScrollToRef = () => aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' })
+function Home() {
+    const scrollToAbout = () => {
+        const aboutSection = document.querySelector( '#about' );
+        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
+    };
     return (
         <Grid container
+              id={'home'}
               direction="row"
               sx={{
                   backgroundColor: '#212529',
@@ -34,7 +37,7 @@ function Home(props) {
                 </Typography>
             </Grid>
             <Grid item mt={5} xs={"auto"} alignSelf={'flex-start'}>
-                <AppDrawer aboutRef={aboutRef}/>
+                <AppDrawer />
             </Grid>
             <Grid item xs={6}>
             </Grid>
@@ -88,7 +91,7 @@ function Home(props) {
                 </IconButton>
             </Grid>
             <Grid item xs={'auto'} mb={3} alignSelf={'flex-end'}>
-                <DownButton scrollHandler={() => ScrollToRef()} text={'about'}/>
+                <DownButton scrollHandler={() => scrollToAbout()} text={'about'}/>
             </Grid>
         </Grid>
     );

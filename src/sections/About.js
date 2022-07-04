@@ -3,12 +3,11 @@ import {Avatar, Grid, Typography} from "@mui/material";
 import AvatarImg from "../assets/avatar.jpg";
 
 
-function About(props) {
-    const {aboutRef} = props;
+function About() {
 
     return (
         <Grid container
-              ref={aboutRef}
+              id={'about'}
               direction="row"
               sx={{
                   backgroundColor: '#fff',
@@ -36,7 +35,7 @@ function About(props) {
                             height: 250
                         }}/>
             </Grid>
-            <Grid item mt={5} xs={8}>
+            <Grid item mt={5} xs={8} alignSelf={'flex-end'}>
             </Grid>
             <Grid item xs={4}>
                 <Typography
