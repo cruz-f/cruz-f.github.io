@@ -1,9 +1,15 @@
 import * as React from 'react';
 import {Avatar, Grid, Typography} from "@mui/material";
 import AvatarImg from "../assets/avatar.jpg";
+import UpButton from "../components/UpButton";
 
 
 function About() {
+
+    const scrollToHome = () => {
+        const homeSection = document.querySelector( '#home' );
+        homeSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
+    }
 
     return (
         <Grid container
@@ -16,16 +22,8 @@ function About() {
               }}
               justifyContent="space-between"
               alignItems="center">
-            <Grid item mt={5} xs={4} alignSelf={'center'}>
-                <Typography color={'#212529'}
-                            sx={{
-                                fontWeight: 'lighter',
-                                textTransform: "uppercase",
-                                writingMode: "vertical-lr",
-                                transform: "scale(-1)",
-                            }}>
-                    About
-                </Typography>
+            <Grid item mt={2} xs={4} alignSelf={'center'}>
+                <UpButton scrollHandler={() => scrollToHome()} text={'home'}/>
                 <Avatar alt="avatar"
                         src={AvatarImg}
                         sx={{
@@ -35,9 +33,9 @@ function About() {
                             height: 250
                         }}/>
             </Grid>
-            <Grid item mt={5} xs={8} alignSelf={'flex-end'}>
+            <Grid item mt={2} xs={8}>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item mb={3} xs={4}>
                 <Typography
                     color={'#212529'}
                     variant="subtitle1"
@@ -52,7 +50,7 @@ function About() {
                     One of the co-founders of OmniumAI, a company focused on solutions of artificial intelligence and data science for biotechnology.
                 </Typography>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item mb={3} xs={8}>
             </Grid>
         </Grid>
     );
