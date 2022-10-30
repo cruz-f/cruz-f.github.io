@@ -51,7 +51,7 @@ function Home() {
                         textTransform: "uppercase",
                         textAlign: 'justify',
                     }}>
-                    Artificial Intelligence and Data Science for Biology
+                    Data Science for Biology
                 </Typography>
                 <Typography
                     color={'#FFF'}
@@ -72,8 +72,8 @@ function Home() {
                         fontWeight: 'lighter',
                         textAlign: 'justify',
                     }}>
-                    I am Fernando Cruz from Barcelos, Portugal.
-                    I am a Ph.D. student in Biomedical Engineering and Bioinformatics
+                    I am Fernando Cruz from Viana do Castelo, Portugal.
+                    I am a Ph.D. student in Bioinformatics
                     at the University of Minho.
                 </Typography>
             </Grid>
@@ -91,7 +91,7 @@ function Home() {
                 </IconButton>
             </Grid>
             <Grid item xs={'auto'} mb={3} alignSelf={'flex-end'}>
-                <DownButton scrollHandler={() => scrollToAbout()} text={'about'}/>
+                <DownButton scrollHandler={() => scrollToAbout()} text={'about'} color={'#ffffff'}/>
             </Grid>
         </Grid>
     );

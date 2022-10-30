@@ -1,9 +1,22 @@
 import {IconButton, Stack, Typography} from "@mui/material";
-import {ReactComponent as DownArrow} from "../assets/down-arrow.svg";
+import {ReactComponent as WhiteDownArrow} from "../assets/white-down-arrow.svg";
+import {ReactComponent as BlackDownArrow} from "../assets/black-down-arrow.svg";
 
 
 function DownButton(props) {
-    const {scrollHandler, text} = props;
+    const {scrollHandler, text, color} = props;
+    const downArrowCustom = (color) => {
+        if (color === '#ffffff') {
+            return (
+                <WhiteDownArrow width={12} height={36}/>
+            );
+        }
+        else {
+            return (
+                <BlackDownArrow width={12} height={36}/>
+            );
+        }
+    }
     return (
         <IconButton onClick={scrollHandler}
                     sx={{
@@ -21,8 +34,9 @@ function DownButton(props) {
                 justifyContent="center"
                 alignItems="center"
                 spacing={2}>
-                <Typography color={'#fff'}
+                <Typography color={color}
                             sx={{
+                                fontSize: '0.8rem',
                                 fontWeight: 'lighter',
                                 textTransform: "uppercase",
                                 writingMode: "vertical-lr",
@@ -30,7 +44,7 @@ function DownButton(props) {
                             }}>
                     {text}
                 </Typography>
-                <DownArrow width={12} height={54}/>
+                {downArrowCustom(color)}
             </Stack>
         </IconButton>
     );
