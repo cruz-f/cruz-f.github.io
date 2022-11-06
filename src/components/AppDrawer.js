@@ -15,6 +15,10 @@ function AppDrawer() {
         const aboutSection = document.querySelector( '#about' );
         aboutSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
     };
+    const scrollToTimeline = () => {
+        const aboutSection = document.querySelector( '#timeline' );
+        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center'});
+    };
 
     const [state, setState] = React.useState(false);
 
@@ -33,7 +37,7 @@ function AppDrawer() {
                 onClose={() => setState(false)}
                 sx = {{
                     '& .MuiDrawer-paper': { minWidth: '60vw', maxWidth: '60vw', maxHeight: '100vh',
-                        backgroundColor: '#80ed99'}
+                        backgroundColor: '#0E4749'}
                 }}>
                 <Grid container
                       direction="row"
@@ -51,6 +55,10 @@ function AppDrawer() {
                                           handler={() => {setState(false); scrollToAbout()}} />
                             </ListItem>
                             <ListItem>
+                                <MenuLink text={'TIMELINE'}
+                                          handler={() => {setState(false); scrollToTimeline()}} />
+                            </ListItem>
+                            <ListItem>
                                 <MenuLink text={'TOOLS'} handler={() => setState(false)} />
                             </ListItem>
                             <ListItem>
@@ -64,7 +72,7 @@ function AppDrawer() {
                     <Grid item mt={5} xs={"auto"}>
                         <IconButton
                             onClick={() => setState(false)}>
-                            <CloseIcon sx={{ color: "#22577a" }} fontSize="large"/>
+                            <CloseIcon sx={{ color: "#FFFFFF" }} fontSize="large"/>
                         </IconButton>
                     </Grid>
                 </Grid>

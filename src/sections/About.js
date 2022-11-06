@@ -44,13 +44,13 @@ const aboutSections = [
 function About() {
     const scrollToTimeline = () => {
         const timelineSection = document.querySelector( '#timeline' );
-        timelineSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
+        timelineSection.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center'});
     };
     return (
         <Grid container
               id={'about'}
               direction="row"
-              justifyContent="space-between"
+              justifyContent="space-evenly"
               alignItems="stretch">
             <Grid item px={2} py={3} xs={4}>
                 <Typography color={'#212529'}
@@ -111,7 +111,9 @@ function About() {
                     Collaborator at OmniumAI. OmniumAI is a company focused on solutions of artificial intelligence
                     and data science for biotechnology.
                 </Typography>
-                <DownButton scrollHandler={() => scrollToTimeline()} text={'timeline'} color={'#212529'}/>
+                <div style={{paddingTop: "3rem"}}>
+                    <DownButton scrollHandler={() => scrollToTimeline()} text={'timeline'} color={'#212529'}/>
+                </div>
             </Grid>
             <Grid item xs={8}>
                 <Accordion>

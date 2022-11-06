@@ -5,7 +5,7 @@ import {Link, Typography} from "@mui/material";
 function MenuLink(props) {
     const {text, handler} = props;
     return (
-        <Link color={"#22577a"}
+        <Link color={"#FFFFFF"}
               sx={{
                   textDecoration: 'none',
                   zIndex: '1',
@@ -21,7 +21,7 @@ function MenuLink(props) {
                       height: '3px',
                       bottom: '0',
                       left: '0',
-                      background: '#22577a',
+                      background: '#FFFFFF',
                       borderRadius: '3px',
                       transitionProperty: 'width',
                       transitionDuration: '0.4s',
@@ -45,7 +45,7 @@ function MenuLink(props) {
               }}
               onClick={handler}>
             <Typography
-                color={'#22577a'}
+                color={'#FFFFFF'}
                 variant="h3"
                 component="h3"
                 sx={{

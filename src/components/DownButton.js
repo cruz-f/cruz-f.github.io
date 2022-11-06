@@ -27,6 +27,7 @@ function DownButton(props) {
                         '&:hover': {
                             transform: 'translateY(.5rem)',
                             cursor: 'pointer',
+                            backgroundColor: 'transparent',
                         }
                     }}>
             <Stack
