@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.20b7849d.css",
-    "main.js": "/static/js/main.e13ec225.js",
+    "main.js": "/static/js/main.d3c825f7.js",
     "static/js/787.fe917390.chunk.js": "/static/js/787.fe917390.chunk.js",
     "static/media/data.jpg": "/static/media/data.0360201e9476313e7d80.jpg",
     "static/media/bioinformatics.jpg": "/static/media/bioinformatics.4eae951a1404e4079098.jpg",
@@ -12,11 +12,11 @@
     "static/media/black-down-arrow.svg": "/static/media/black-down-arrow.a8581248379e09c53cb5e6a0fa0c29be.svg",
     "static/media/white-down-arrow.svg": "/static/media/white-down-arrow.f9fa28cc082ee7b83c83a25db53e0c55.svg",
     "main.20b7849d.css.map": "/static/css/main.20b7849d.css.map",
-    "main.e13ec225.js.map": "/static/js/main.e13ec225.js.map",
+    "main.d3c825f7.js.map": "/static/js/main.d3c825f7.js.map",
     "787.fe917390.chunk.js.map": "/static/js/787.fe917390.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20b7849d.css",
-    "static/js/main.e13ec225.js"
+    "static/js/main.d3c825f7.js"
   ]
 }
