@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Grid, Typography, IconButton} from "@mui/material";
+import {Grid, Typography, IconButton, Link} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
@@ -72,9 +72,23 @@ function Home() {
                         fontWeight: 'lighter',
                         textAlign: 'justify',
                     }}>
-                    I am Fernando Cruz from Viana do Castelo, Portugal.
-                    I am a Ph.D. student in Bioinformatics
-                    at the University of Minho.
+                    I am Fernando Cruz from Viana do Castelo, Portugal,
+                    currently working in bioinformatics and data science.
+                </Typography>
+                <Typography
+                    color={'#FFF'}
+                    variant="subtitle1"
+                    component="h3"
+                    sx={{
+                        fontWeight: 'lighter',
+                        textAlign: 'justify',
+                    }}>
+                    I am the Chief Technology Officer at
+                    <Link href="https://omniumai.com"
+                          underline="none"
+                          pl={"0.3rem"}>
+                        OMNIUMAI
+                    </Link>, a company focused on solutions of artificial intelligence for biotechnology.
                 </Typography>
             </Grid>
             <Grid item xs={2}>

@@ -58,15 +58,6 @@ function AppDrawer() {
                                 <MenuLink text={'TIMELINE'}
                                           handler={() => {setState(false); scrollToTimeline()}} />
                             </ListItem>
-                            <ListItem>
-                                <MenuLink text={'TOOLS'} handler={() => setState(false)} />
-                            </ListItem>
-                            <ListItem>
-                                <MenuLink text={'PUBLICATIONS'} handler={() => setState(false)} />
-                            </ListItem>
-                            <ListItem>
-                                <MenuLink text={'CONTACT'} handler={() => setState(false)} />
-                            </ListItem>
                         </List>
                     </Grid>
                     <Grid item mt={5} xs={"auto"}>

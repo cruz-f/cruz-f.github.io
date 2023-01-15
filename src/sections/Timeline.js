@@ -54,16 +54,6 @@ const timelineItems = [
             'in the ProTRenD web platform BioISO service and MEWpy Python package.',
     },
     {
-        position: 'Collaborator',
-        date: '2021-present',
-        company: 'OMNIUMAI',
-        url: 'https://www.tecminho.uminho.pt/storage/app/media/images/spinoffs/omniumai.png',
-        description: 'Collaborator at OMNIUMAI, a spin-off company from the University of Minho. ' +
-            'I have been directly involved in the development of OmniA, our machine learning platform for biological data. ' +
-            'Purely based on automated machine learning, OmniA can generate predictive models for drug classification, ' +
-            'drug sensitivity, antibody prediction, and more.',
-    },
-    {
         position: 'Invited assistant professor',
         date: 'Sep 2022-present',
         company: 'University of Minho',
@@ -71,6 +61,16 @@ const timelineItems = [
         description: 'I am an auxiliary professor at the Department of Informatics, University of Minho. ' +
             'I am currently assisting lectures in the areas of Bioinformatics and Machine Learning applied to Biology.',
     },
+    {
+        position: 'Chief Technology Officer',
+        date: '2021-present',
+        company: 'OMNIUMAI',
+        url: 'https://www.tecminho.uminho.pt/storage/app/media/images/spinoffs/omniumai.png',
+        description: 'Chief Technology Officer at OMNIUMAI, a spin-off company from the University of Minho. ' +
+            'I have been directly involved in the development of OmniA, our machine learning platform for biological data. ' +
+            'Purely based on automated machine learning, OmniA can generate predictive models for drug classification, ' +
+            'drug sensitivity, antibody prediction, and more.',
+    }
 ]
 
 

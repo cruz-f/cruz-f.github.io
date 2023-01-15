@@ -81,7 +81,7 @@ function About() {
                         paddingX: "0.5rem",
                         paddingY: "0.2rem",
                     }}>
-                    I am a Ph.D. student at the Centre of Biological Engineering, University of Minho.
+                    I am the Chief Technology Officer at OMNIUMAI and former Ph.D. student at the University of Minho.
                 </Typography>
                 <Typography
                     color={'#212529'}
@@ -94,8 +94,7 @@ function About() {
                         paddingX: "0.5rem",
                         paddingY: "0.2rem",
                     }}>
-                    I am interested in bioinformatics and currently working on the
-                    development of computational tools for biological data engineering and analysis.
+                    I am a bioinformatician using data science and engineering solutions to understand the complexity of biological systems.
                 </Typography>
                 <Typography
                     color={'#212529'}
@@ -108,10 +107,11 @@ function About() {
                         paddingX: "0.5rem",
                         paddingY: "0.2rem",
                     }}>
-                    Collaborator at OmniumAI. OmniumAI is a company focused on solutions of artificial intelligence
-                    and data science for biotechnology.
+                    OmniumAI is a company focused on solutions of artificial intelligence
+                    and data science for biotechnology. At OmniumAI, we are developing automated pipelines for the analysis of
+                    biological data.
                 </Typography>
-                <div style={{paddingTop: "3rem"}}>
+                <div style={{paddingTop: "2.8rem"}}>
                     <DownButton scrollHandler={() => scrollToTimeline()} text={'timeline'} color={'#212529'}/>
                 </div>
             </Grid>
