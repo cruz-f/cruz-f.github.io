@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Avatar, Grid, Typography} from "@mui/material";
+import {Avatar, Grid, Typography, useMediaQuery} from "@mui/material";
 import Accordion from "../components/Accordion";
 import AccordionDetail from "../components/AccordionDetail";
 import AvatarImg from "../assets/avatar.jpg";
@@ -46,13 +46,18 @@ function About() {
         const timelineSection = document.querySelector( '#timeline' );
         timelineSection.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center'});
     };
+
+    const isMobile = useMediaQuery('(max-width: 1024px)');
+
     return (
         <Grid container
               id={'about'}
               direction="row"
               justifyContent="space-evenly"
               alignItems="stretch">
-            <Grid item px={2} py={3} xs={4}>
+            <Grid item
+                  px={2} py={3}
+                  xs={12} sm={12} md={4}>
                 <Typography color={'#212529'}
                             sx={{
                                 fontWeight: 'lighter',
@@ -111,11 +116,14 @@ function About() {
                     and data science for biotechnology. At OmniumAI, we are developing automated pipelines for the analysis of
                     biological data.
                 </Typography>
-                <div style={{paddingTop: "2.8rem"}}>
-                    <DownButton scrollHandler={() => scrollToTimeline()} text={'timeline'} color={'#212529'}/>
-                </div>
+                {!isMobile &&
+                    <div style={{paddingTop: "2.8rem"}}>
+                        <DownButton scrollHandler={() => scrollToTimeline()} text={'timeline'} color={'#212529'}/>
+                    </div>
+                }
             </Grid>
-            <Grid item xs={8}>
+            <Grid item
+                  xs={12} sm={12} md={8}>
                 <Accordion>
                     {aboutSections.map((section, index) => (
                         <AccordionDetail index={index} title={section.title}

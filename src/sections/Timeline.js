@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import {Grid} from "@mui/material";
+import {Grid, Stack, useMediaQuery} from "@mui/material";
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from "../components/TimelineItem";
+import TimelineCard from "../components/TimelineCard";
 
 
 const timelineItems = [
@@ -63,7 +64,7 @@ const timelineItems = [
     },
     {
         position: 'Chief Technology Officer',
-        date: '2021-present',
+        date: 'Jun 2021-present',
         company: 'OMNIUMAI',
         url: 'https://www.tecminho.uminho.pt/storage/app/media/images/spinoffs/omniumai.png',
         description: 'Chief Technology Officer at OMNIUMAI, a spin-off company from the University of Minho. ' +
@@ -75,6 +76,8 @@ const timelineItems = [
 
 
 function TimelineSection() {
+
+    const isMobile = useMediaQuery('(max-width: 1024px)');
 
     return (
         <Grid container
@@ -96,11 +99,19 @@ function TimelineSection() {
                         }}>
                 Timeline
             </Typography>
-            <Timeline position="alternate">
-                {timelineItems.map((item) => (
-                    <TimelineItem {...item} />
-                ))}
-            </Timeline>
+            {isMobile ?
+                <Stack spacing={2} sx={{marginX: 'auto', marginTop: '2rem'}}>
+                    {timelineItems.map((item) => (
+                        <TimelineCard {...item}/>
+                    ))}
+                </Stack>
+                :
+                <Timeline align="alternate">
+                    {timelineItems.map((item) => (
+                        <TimelineItem {...item}/>
+                    ))}
+                </Timeline>
+            }
         </Grid>
     );
 }
