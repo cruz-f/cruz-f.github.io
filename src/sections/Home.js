@@ -20,10 +20,12 @@ function Home() {
                   backgroundColor: '#212529',
                   minHeight: '100vh',
                   paddingX: '2rem',
+                  paddingTop: '3rem',
               }}
+              columns={{ xs: 8, sm: 8, md: 12, lg: 12 }}
               justifyContent="space-between"
               alignItems="center">
-            <Grid item mt={5} xs={10} alignSelf={'flex-start'}>
+            <Grid item xs={7} sm={7} md={11} lg={11} pt={{xs: 1}}>
                 <Typography
                     color={'#FFF'}
                     variant="h6"
@@ -36,12 +38,16 @@ function Home() {
                     Fernando Cruz
                 </Typography>
             </Grid>
-            <Grid item mt={5} xs={"auto"} alignSelf={'flex-start'}>
+            <Grid item xs={1} sm={1} md={1} lg={1} >
                 <AppDrawer />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={0} sm={0} md={0} lg={12}>
+            </Grid>
+            <Grid item xs={0} sm={1} md={1} lg={6}>
+            </Grid>
+            <Grid item xs={8} sm={5} md={9} lg={4}>
                 <Typography
                     color={'#FFF'}
                     variant="h4"
@@ -49,7 +55,6 @@ function Home() {
                     sx={{
                         fontWeight: 'lighter',
                         textTransform: "uppercase",
-                        textAlign: 'justify',
                     }}>
                     Data Science for Biology
                 </Typography>
@@ -91,9 +96,13 @@ function Home() {
                     </Link>, a company focused on solutions of artificial intelligence for biotechnology.
                 </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={0} sm={2} md={2} lg={2}>
             </Grid>
-            <Grid item xs={10} mb={3} alignSelf={'flex-end'}>
+            <Grid item xs={12} sm={0} md={0} lg={12}>
+            </Grid>
+            <Grid item xs={12} sm={0} md={0} lg={12}>
+            </Grid>
+            <Grid item xs={7} sm={7} md={11} lg={11}>
                 <IconButton href={"https://www.linkedin.com/in/fernando-cruz-ba2b65142"}>
                     <LinkedInIcon sx={{ color: "#FFF" }} fontSize="large"/>
                 </IconButton>
@@ -104,7 +113,7 @@ function Home() {
                     <AlternateEmailIcon sx={{ color: "#FFF" }} fontSize="large"/>
                 </IconButton>
             </Grid>
-            <Grid item xs={'auto'} mb={3} alignSelf={'flex-end'}>
+            <Grid item xs={1} sm={1} md={1} lg={1}>
                 <DownButton scrollHandler={() => scrollToAbout()} text={'about'} color={'#ffffff'}/>
             </Grid>
         </Grid>
