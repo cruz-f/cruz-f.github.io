@@ -25,7 +25,7 @@ function Home() {
               columns={{ xs: 8, sm: 8, md: 12, lg: 12 }}
               justifyContent="space-between"
               alignItems="center">
-            <Grid item xs={7} sm={7} md={11} lg={11} pt={{xs: 1}}>
+            <Grid item xs={7} sm={7} md={11} lg={11} pb={{xs:1}}>
                 <Typography
                     color={'#FFF'}
                     variant="h6"

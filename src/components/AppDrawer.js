@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Drawer, Grid, IconButton, List, ListItem} from "@mui/material";
+import {Dialog, Drawer, Grid, IconButton, List, ListItem, useTheme} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuLink from "./MenuLink";
@@ -22,6 +22,8 @@ function AppDrawer() {
 
     const [state, setState] = React.useState(false);
 
+    const theme = useTheme();
+
     return (
         <>
             <IconButton
@@ -33,18 +35,31 @@ function AppDrawer() {
                 type={'temporary'}
                 anchor={'right'}
                 open={state}
+                mobile={true}
                 disableRestoreFocus={true}
                 onClose={() => setState(false)}
                 sx = {{
-                    '& .MuiDrawer-paper': { minWidth: '60vw', maxWidth: '60vw', maxHeight: '100vh',
-                        backgroundColor: '#0E4749'}
+                    '& .MuiDrawer-paper': {
+                        backgroundColor: '#0E4749',
+                        minWidth: '100vw',
+                        maxWidth: '100vw',
+                        maxHeight: '100vh',
+                    },
+                    [theme.breakpoints.up('sm')]: {
+                        '& .MuiDrawer-paper': {
+                            backgroundColor: '#0E4749',
+                            minWidth: '60vw',
+                            maxWidth: '60vw',
+                            maxHeight: '100vh',
+                        },
+                    }
                 }}>
                 <Grid container
                       direction="row"
                       rowSpacing={4}
                       justifyContent="space-evenly"
                       alignItems="flex-start">
-                    <Grid item mt={5} xs={10}>
+                    <Grid item mt={5} xs={12} sm={12} md={10} pl={{md:3}}>
                         <List>
                             <ListItem>
                                 <MenuLink text={'HOME'}
@@ -60,7 +75,7 @@ function AppDrawer() {
                             </ListItem>
                         </List>
                     </Grid>
-                    <Grid item mt={5} xs={"auto"}>
+                    <Grid item mt={7} xs={12} sm={12} md={2}>
                         <IconButton
                             onClick={() => setState(false)}>
                             <CloseIcon sx={{ color: "#FFFFFF" }} fontSize="large"/>
