@@ -109,7 +109,7 @@ function Home() {
                 <IconButton href={"https://github.com/cruz-f"}>
                     <GitHubIcon sx={{ color: "#FFF" }} fontSize="large"/>
                 </IconButton>
-                <IconButton href={"mailto:fernando.cruz@ceb.uminho.pt"}>
+                <IconButton href={"mailto:fcruz@omniumai.com"}>
                     <AlternateEmailIcon sx={{ color: "#FFF" }} fontSize="large"/>
                 </IconButton>
             </Grid>
