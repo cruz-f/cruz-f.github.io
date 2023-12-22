@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Grid, Typography, IconButton, Link} from "@mui/material";
+import { Grid, Typography, IconButton, Link } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
@@ -9,23 +9,23 @@ import DownButton from "../components/DownButton";
 
 function Home() {
     const scrollToAbout = () => {
-        const aboutSection = document.querySelector( '#about' );
-        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center'});
+        const aboutSection = document.querySelector('#about');
+        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
     };
     return (
         <Grid container
-              id={'home'}
-              direction="row"
-              sx={{
-                  backgroundColor: '#212529',
-                  minHeight: '100vh',
-                  paddingX: '2rem',
-                  paddingTop: '3rem',
-              }}
-              columns={{ xs: 8, sm: 8, md: 12, lg: 12 }}
-              justifyContent="space-between"
-              alignItems="center">
-            <Grid item xs={7} sm={7} md={11} lg={11} pb={{xs:1}}>
+            id={'home'}
+            direction="row"
+            sx={{
+                backgroundColor: '#212529',
+                minHeight: '100vh',
+                paddingX: '2rem',
+                paddingTop: '3rem',
+            }}
+            columns={{ xs: 8, sm: 8, md: 12, lg: 12 }}
+            justifyContent="space-between"
+            alignItems="center">
+            <Grid item xs={7} sm={7} md={11} lg={11} pb={{ xs: 1 }}>
                 <Typography
                     color={'#FFF'}
                     variant="h6"
@@ -56,7 +56,7 @@ function Home() {
                         fontWeight: 'lighter',
                         textTransform: "uppercase",
                     }}>
-                    Data Science for Biology
+                    Software Engineer
                 </Typography>
                 <Typography
                     color={'#FFF'}
@@ -78,7 +78,7 @@ function Home() {
                         textAlign: 'justify',
                     }}>
                     I am Fernando Cruz from Viana do Castelo, Portugal,
-                    currently working in bioinformatics and data science.
+                    currently working in data engineering and science, specifically modeling large-scale datasets to extract valuable insights.
                 </Typography>
                 <Typography
                     color={'#FFF'}
@@ -88,12 +88,12 @@ function Home() {
                         fontWeight: 'lighter',
                         textAlign: 'justify',
                     }}>
-                    I am the Chief Technology Officer at
-                    <Link href="https://omniumai.com"
-                          underline="none"
-                          pl={"0.3rem"}>
+                    I'm a software engineer at
+                    <Link href="https://omniumai.com/"
+                        underline="none"
+                        pl={"0.3rem"}>
                         OMNIUMAI
-                    </Link>, a company focused on solutions of artificial intelligence for biotechnology.
+                    </Link>. We specialize in developing data science solutions for the biotechnology industry
                 </Typography>
             </Grid>
             <Grid item xs={0} sm={2} md={2} lg={2}>
@@ -103,18 +103,18 @@ function Home() {
             <Grid item xs={12} sm={0} md={0} lg={12}>
             </Grid>
             <Grid item xs={7} sm={7} md={11} lg={11}>
-                <IconButton href={"https://www.linkedin.com/in/fernando-cruz-ba2b65142"}>
-                    <LinkedInIcon sx={{ color: "#FFF" }} fontSize="large"/>
+                <IconButton href={"https://www.linkedin.com/in/fernando-cruz-ba2b65142/"}>
+                    <LinkedInIcon sx={{ color: "#FFF" }} fontSize="large" />
                 </IconButton>
-                <IconButton href={"https://github.com/cruz-f"}>
-                    <GitHubIcon sx={{ color: "#FFF" }} fontSize="large"/>
+                <IconButton href={"https://github.com/cruz-f/"}>
+                    <GitHubIcon sx={{ color: "#FFF" }} fontSize="large" />
                 </IconButton>
                 <IconButton href={"mailto:fcruz@omniumai.com"}>
-                    <AlternateEmailIcon sx={{ color: "#FFF" }} fontSize="large"/>
+                    <AlternateEmailIcon sx={{ color: "#FFF" }} fontSize="large" />
                 </IconButton>
             </Grid>
             <Grid item xs={1} sm={1} md={1} lg={1}>
-                <DownButton scrollHandler={() => scrollToAbout()} text={'about'} color={'#ffffff'}/>
+                <DownButton scrollHandler={() => scrollToAbout()} text={'about'} color={'#ffffff'} />
             </Grid>
         </Grid>
     );

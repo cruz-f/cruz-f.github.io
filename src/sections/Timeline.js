@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import {Grid, Stack, useMediaQuery} from "@mui/material";
+import { Grid, Stack, useMediaQuery } from "@mui/material";
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from "../components/TimelineItem";
 import TimelineCard from "../components/TimelineCard";
@@ -63,14 +63,14 @@ const timelineItems = [
             'I am currently assisting lectures in the areas of Bioinformatics and Machine Learning applied to Biology.',
     },
     {
-        position: 'Chief Technology Officer',
+        position: 'Software Engineer',
         date: 'Jun 2021-present',
         company: 'OMNIUMAI',
         url: 'https://www.tecminho.uminho.pt/storage/app/media/images/spinoffs/omniumai.png',
-        description: 'Chief Technology Officer at OMNIUMAI, a spin-off company from the University of Minho. ' +
-            'I have been directly involved in the development of OmniA, our machine learning platform for biological data. ' +
+        description: 'Software Engineer at OMNIUMAI, a spin-off company from the University of Minho. ' +
+            'I have been directly involved in the development of OmniA, our automated machine learning platform for biotech data. ' +
             'Purely based on automated machine learning, OmniA can generate predictive models for drug classification, ' +
-            'drug sensitivity, antibody prediction, and more.',
+            'drug sensitivity, antibody prediction, and more. I am also working as a full-stack developer in the development of web-based applications',
     }
 ]
 
@@ -81,34 +81,34 @@ function TimelineSection() {
 
     return (
         <Grid container
-              id={'timeline'}
-              direction="row"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              sx={{
-                  backgroundColor: '#0E4749',
-                  paddingX: '2rem',
-                  paddingY: '2rem',
-              }}>
+            id={'timeline'}
+            direction="row"
+            justifyContent="flex-start"
+            alignItems="flex-start"
+            sx={{
+                backgroundColor: '#0E4749',
+                paddingX: '2rem',
+                paddingY: '2rem',
+            }}>
             <Typography color={'#FFFFFF'}
-                        sx={{
-                            fontWeight: 'lighter',
-                            textTransform: "uppercase",
-                            writingMode: "vertical-lr",
-                            transform: "scale(-1)",
-                        }}>
+                sx={{
+                    fontWeight: 'lighter',
+                    textTransform: "uppercase",
+                    writingMode: "vertical-lr",
+                    transform: "scale(-1)",
+                }}>
                 Timeline
             </Typography>
             {isMobile ?
-                <Stack spacing={2} sx={{marginX: 'auto', marginTop: '2rem'}}>
+                <Stack spacing={2} sx={{ marginX: 'auto', marginTop: '2rem' }}>
                     {timelineItems.map((item) => (
-                        <TimelineCard {...item}/>
+                        <TimelineCard {...item} />
                     ))}
                 </Stack>
                 :
                 <Timeline align="alternate">
                     {timelineItems.map((item) => (
-                        <TimelineItem {...item}/>
+                        <TimelineItem {...item} />
                     ))}
                 </Timeline>
             }

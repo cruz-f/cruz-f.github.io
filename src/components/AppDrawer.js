@@ -41,8 +41,8 @@ function AppDrawer() {
                 sx = {{
                     '& .MuiDrawer-paper': {
                         backgroundColor: '#0E4749',
-                        minWidth: '100vw',
-                        maxWidth: '100vw',
+                        minWidth: '70vw',
+                        maxWidth: '70vw',
                         maxHeight: '100vh',
                     },
                     [theme.breakpoints.up('sm')]: {
