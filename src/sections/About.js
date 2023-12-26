@@ -25,15 +25,16 @@ const aboutSections = [
 
 
 function About() {
-    const scrollToTimeline = () => {
-        const timelineSection = document.querySelector('#timeline');
-        timelineSection.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center' });
+    const scrollToWork = () => {
+        const workSection = document.querySelector('#work');
+        workSection.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center' });
     };
 
     const isMobile = useMediaQuery('(max-width: 1024px)');
 
     return (
-        <Grid container
+        <Grid
+            container
             id={'about'}
             direction="row"
             justifyContent="space-evenly"
@@ -69,19 +70,6 @@ function About() {
                         paddingX: "0.5rem",
                         paddingY: "0.2rem",
                     }}>
-                    I am a Software Engineer at OMNIUMAI.
-                </Typography>
-                <Typography
-                    color={'#212529'}
-                    variant="subtitle2"
-                    component="h3"
-                    sx={{
-                        fontWeight: 'lighter',
-                        textAlign: 'justify!important',
-                        textTransform: 'uppercase',
-                        paddingX: "0.5rem",
-                        paddingY: "0.2rem",
-                    }}>
                     I have a Ph.D. in Biomedical Engineering from the University of Minho, focusing on data engineering and science
                     applied to biotechnology. This work also involved the development of web-based tools for the analysis of biological data.
                 </Typography>
@@ -96,12 +84,12 @@ function About() {
                         paddingX: "0.5rem",
                         paddingY: "0.2rem",
                     }}>
-                    At OmniumAI, I have been leading the development of an automated machine learning platform for cheminformatics and bioinformatics datasets,
+                    I led the development of an automated machine learning platform for cheminformatics and bioinformatics datasets,
                     while working as a full-stack developer in the development of web-based applications.
                 </Typography>
                 {!isMobile &&
                     <div style={{ paddingTop: "2.8rem" }}>
-                        <DownButton scrollHandler={() => scrollToTimeline()} text={'timeline'} color={'#212529'} />
+                        <DownButton scrollHandler={() => scrollToWork()} text={'work'} color={'#212529'} />
                     </div>
                 }
             </Grid>

@@ -1,10 +1,26 @@
 import * as React from 'react';
-import { Grid, Typography, IconButton, Link } from "@mui/material";
+import { Grid, Typography, IconButton, Tooltip } from "@mui/material";
+import { tooltipClasses } from '@mui/material/Tooltip';
+import { styled } from '@mui/material/styles';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { Description } from '@mui/icons-material';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import AppDrawer from "../components/AppDrawer";
 import DownButton from "../components/DownButton";
+import CV from "../assets/cv.pdf";
+
+
+const LightTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+        backgroundColor: theme.palette.common.white,
+        color: 'rgba(0, 0, 0, 0.87)',
+        boxShadow: theme.shadows[1],
+        fontSize: 11,
+    },
+}));
 
 
 function Home() {
@@ -80,21 +96,6 @@ function Home() {
                     I am Fernando Cruz from Viana do Castelo, Portugal,
                     currently working in data engineering and science, specifically modeling large-scale datasets to extract valuable insights.
                 </Typography>
-                <Typography
-                    color={'#FFF'}
-                    variant="subtitle1"
-                    component="h3"
-                    sx={{
-                        fontWeight: 'lighter',
-                        textAlign: 'justify',
-                    }}>
-                    I'm a software engineer at
-                    <Link href="https://omniumai.com/"
-                        underline="none"
-                        pl={"0.3rem"}>
-                        OMNIUMAI
-                    </Link>. We specialize in developing data science solutions for the biotechnology industry
-                </Typography>
             </Grid>
             <Grid item xs={0} sm={2} md={2} lg={2}>
             </Grid>
@@ -109,9 +110,17 @@ function Home() {
                 <IconButton href={"https://github.com/cruz-f/"}>
                     <GitHubIcon sx={{ color: "#FFF" }} fontSize="large" />
                 </IconButton>
-                <IconButton href={"mailto:fcruz@omniumai.com"}>
+                <IconButton href={"mailto:fernandocruz184@gmail.com"}>
                     <AlternateEmailIcon sx={{ color: "#FFF" }} fontSize="large" />
                 </IconButton>
+                <LightTooltip
+                    title="CV"
+                    placement="top"
+                >
+                    <IconButton href={CV} target="_blank">
+                        <Description sx={{ color: "#FFF" }} fontSize="large" />
+                    </IconButton>
+                </LightTooltip>
             </Grid>
             <Grid item xs={1} sm={1} md={1} lg={1}>
                 <DownButton scrollHandler={() => scrollToAbout()} text={'about'} color={'#ffffff'} />

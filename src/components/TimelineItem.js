@@ -8,15 +8,13 @@ import LaptopRoundedIcon from '@mui/icons-material/LaptopRounded';
 import TimelineContent from "@mui/lab/TimelineContent";
 import Typography from "@mui/material/Typography";
 
-function TimelineItem(props) {
+function TimelineItem({ position, date, company, url, description }) {
 
-    const { position, date, company, url, description } = props;
-
-    let [active, setActive] = React.useState(false);
+    const [active, setActive] = React.useState(false);
 
     return (
         <VizSensor
-            offset={{ bottom: -400 }}
+            offset={{ top: -300, bottom: -300 }}
             onChange={(isVisible) => {
                 setActive(isVisible);
             }}
