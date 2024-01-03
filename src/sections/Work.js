@@ -8,21 +8,21 @@ import DownButton from "../components/DownButton";
 
 const timelineItems = [
     {
-        position: 'Internship',
+        position: 'Intern',
         date: 'Feb 2017 - Jul 2017',
         company: 'Chr. Hansen Holding A/S',
         url: 'https://www.holofood.eu/files/ch.png',
-        description: 'Scientific internship at Chr. Hansen Holding A/S, a Danish biotechnology company. ' +
+        description: 'Internship at Chr. Hansen Holding A/S, a world-leading bioscience company located in Denmark. ' +
             'This internship was focused on the reconstruction of the genome-scale metabolic model of ' +
-            'Streptococcus thermophilus as part of my master thesis.',
+            'Streptococcus thermophilus and the development of bioinformatics computational tools.',
     },
     {
-        position: 'Research fellow',
+        position: 'Research scientist',
         date: 'Feb 2018 - Sep 2018',
         company: 'ITQB-UNL',
         url: 'https://www.itqb.unl.pt/education/integracao-de-doutorados-nas-empresas/logo-itqb-hor-signature.png/image_preview',
-        description: 'Research fellow under the project PPBI - Portuguese Platform of BioImaging at ITQB-UNL. ' +
-            'This project was focused on maintaining and supporting the Bacterial Imaging Cluster facility, ' +
+        description: 'Research scientist at ITQB-UNL. ' +
+            'I was responsible for maintaining and supporting the Bacterial Imaging Cluster facility, ' +
             'involving microscopy imaging, image analysis and data management.',
     },
     {
@@ -32,26 +32,26 @@ const timelineItems = [
         url: 'https://bio.di.uminho.pt/assets/img/logocebbig.png',
         description: 'Ph.D. student at the Centre of Biological Engineering (CEB), University of Minho. ' +
             'This work was focused on the development of a computational framework for the reconstruction and analysis ' +
-            'of genome-scale regulatory and metabolic models. The framework comprises a set of tools available ' +
-            'in the ProTRenD web platform BioISO service and MEWpy Python package.',
+            'of genome-scale regulatory and metabolic models. This framework includes ProTRenD web application,' + 
+            'BioISO web server, and MEWpy Python package.',
     },
     {
         position: 'Invited assistant professor',
         date: 'Sep 2022 - Feb 2023',
         company: 'University of Minho',
         url: 'https://www.eng.uminho.pt/SiteAssets/ENG-EN.png',
-        description: 'I am an auxiliary professor at the Department of Informatics, University of Minho. ' +
-            'I am currently assisting lectures in the areas of Bioinformatics and Machine Learning applied to Biology.',
+        description: 'Assistant professor at the Department of Informatics, University of Minho. ' +
+            'I taught several lectures of Machine Learning applied to biological data.',
     },
     {
         position: 'Software Engineer',
         date: 'Jun 2021 - Dec 2023',
         company: 'OmniumAI',
         url: 'https://www.tecminho.uminho.pt/storage/app/media/images/spinoffs/omniumai.png',
-        description: 'Software Engineer at OMNIUMAI, a spin-off company from the University of Minho. ' +
-            'I have been directly involved in the development of OmniA, our automated machine learning platform for biotech data. ' +
+        description: 'Senior software Engineer at OMNIUMAI, a spin-off company from the University of Minho. ' +
+            'I have been directly involved in the development of OmniA, an automated machine learning platform for biological and chemistry data. ' +
             'Purely based on automated machine learning, OmniA can generate predictive models for drug classification, ' +
-            'drug sensitivity, antibody prediction, and more. I am also working as a full-stack developer in the development of web-based applications',
+            'drug sensitivity, antibody prediction, and more. I also worked as a full-stack developer in the development of web-based applications.',
     }
 ]
 
