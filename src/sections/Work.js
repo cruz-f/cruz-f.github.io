@@ -12,46 +12,35 @@ const timelineItems = [
         date: 'Feb 2017 - Jul 2017',
         company: 'Chr. Hansen Holding A/S',
         url: 'https://www.holofood.eu/files/ch.png',
-        description: 'Internship at Chr. Hansen Holding A/S, a world-leading bioscience company located in Denmark. ' +
-            'This internship was focused on the reconstruction of the genome-scale metabolic model of ' +
-            'Streptococcus thermophilus and the development of bioinformatics computational tools.',
+        description: 'Internship at Chr. Hansen holding A/S, a world-leading bioscience company. This internship was focused on the development of bioinformatics computational tools.',
     },
     {
         position: 'Research scientist',
         date: 'Feb 2018 - Sep 2018',
         company: 'ITQB-UNL',
         url: 'https://www.itqb.unl.pt/education/integracao-de-doutorados-nas-empresas/logo-itqb-hor-signature.png/image_preview',
-        description: 'Research scientist at ITQB-UNL. ' +
-            'I was responsible for maintaining and supporting the Bacterial Imaging Cluster facility, ' +
-            'involving microscopy imaging, image analysis and data management.',
+        description: 'Research scientist at ITQB-UNL. I was responsible for maintaining and supporting the bacterial imaging cluster facility, involving microscopy imaging, image analysis, and data management.',
     },
     {
         position: 'Ph.D. student',
         date: 'Oct 2018 - Sep 2022',
         company: 'Centre of Biological Engineering (CEB)',
         url: 'https://bio.di.uminho.pt/assets/img/logocebbig.png',
-        description: 'Ph.D. student at the Centre of Biological Engineering (CEB), University of Minho. ' +
-            'This work was focused on the development of a computational framework for the reconstruction and analysis ' +
-            'of genome-scale regulatory and metabolic models. This framework includes ProTRenD web application,' + 
-            'BioISO web server, and MEWpy Python package.',
+        description: 'Ph.D. student at the Centre of Biological Engineering (CEB), University of Minho. I developed a computational framework for the analysis of biological data. This framework includes a data engineering solution using ETL tools to collect, transform, and integrate dispersed sources of biological data. This data warehouse of biological data allows scientists to retrieve extremely valuable insights about the regulatory mechanisms of organisms. I have also developed a web application (backend and frontend) and reporting tools to allow users to visualize and analyze the data warehouse.',
     },
     {
         position: 'Invited assistant professor',
         date: 'Sep 2022 - Feb 2023',
         company: 'University of Minho',
         url: 'https://www.eng.uminho.pt/SiteAssets/ENG-EN.png',
-        description: 'Assistant professor at the Department of Informatics, University of Minho. ' +
-            'I taught several lectures of Machine Learning applied to biological data.',
+        description: 'Assistant Professor at the Department of Informatics, University of Minho. I taught several lectures on machine learning applied to biological data. I also taught workshops on Unix and Docker.',
     },
     {
         position: 'Software Engineer',
         date: 'Jun 2021 - Dec 2023',
         company: 'OmniumAI',
         url: 'https://www.tecminho.uminho.pt/storage/app/media/images/spinoffs/omniumai.png',
-        description: 'Senior software Engineer at OMNIUMAI, a spin-off company from the University of Minho. ' +
-            'I have been directly involved in the development of OmniA, an automated machine learning platform for biological and chemistry data. ' +
-            'Purely based on automated machine learning, OmniA can generate predictive models for drug classification, ' +
-            'drug sensitivity, antibody prediction, and more. I also worked as a full-stack developer in the development of web-based applications.',
+        description: 'Senior software engineer at OmniumAI, a startup from Braga, Portugal. I have been directly involved in developing omnia, an automated machine learning platform for biological and chemistry data. Omnia can perform automated feature engineering and generate predictive models for drug classification, antibody prediction, and more. In addition, I have also been directly involved in the development of CibusAI, an AIdriven food reformulation platform. I have used data engineering techniques and ETL tools to create endto- end data pipelines. I also worked as a full-stack developer in developing data engineering solutions and web applications (backend and frontend) for major clients.',
     }
 ]
 
