@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Grid, Typography, IconButton, Tooltip } from "@mui/material";
 import { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
@@ -8,7 +7,7 @@ import { Description } from '@mui/icons-material';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import AppDrawer from "../components/AppDrawer";
 import DownButton from "../components/DownButton";
-import CV from "../assets/cv.pdf";
+import CV from "../assets/cv_extended.pdf";
 
 
 const LightTooltip = styled(({ className, ...props }) => (
@@ -72,7 +71,7 @@ function Home() {
                         fontWeight: 'lighter',
                         textTransform: "uppercase",
                     }}>
-                    Software Engineer
+                    Data Scientist
                 </Typography>
                 <Typography
                     color={'#FFF'}
