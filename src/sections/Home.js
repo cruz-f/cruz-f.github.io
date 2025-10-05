@@ -7,7 +7,7 @@ import { Description } from '@mui/icons-material';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import AppDrawer from "../components/AppDrawer";
 import DownButton from "../components/DownButton";
-import CV from "../assets/cv_extended.pdf";
+import CV from "../assets/cv.pdf";
 
 
 const LightTooltip = styled(({ className, ...props }) => (
