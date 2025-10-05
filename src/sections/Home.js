@@ -94,7 +94,7 @@ function Home() {
                         textAlign: 'justify',
                     }}>
                     I am Fernando Cruz from Viana do Castelo, Portugal,
-                    currently working in data engineering and science, specifically modeling large-scale datasets to extract valuable insights.
+                    currently working as a data scientist.
                 </Typography>
             </Grid>
             <Grid item xs={0} sm={2} md={2} lg={2}>
